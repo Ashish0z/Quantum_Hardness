@@ -69,7 +69,7 @@ def bit20_sim(instance, n, schedules):
         # if psi file exists, load it
         if os.path.isfile(f'./Data_20bit/data/instance_{instance}_schedule_{str(sch)}_psi.npz'):
             process_logger.info("Loading psi from file")
-            psi = list(np.load(f'./data/instance_{instance}_schedule_{str(sch)}_psi.npz')['psi'])
+            psi = list(np.load(f'./Data_20bit/data/instance_{instance}_schedule_{str(sch)}_psi.npz')['psi'])
             r.set_initial_value(psi[-1], len(psi)-1)
         else:
             r.set_initial_value(psi0, 0)
